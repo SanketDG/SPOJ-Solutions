@@ -2,26 +2,26 @@
 
 int main(void)
 {
-    int T, a, l, s, n, d, ft, num, i;
+    int T, i;
+    long long int a, l, s, n, d, ft, num;
     scanf("%d", &T);
     for(i = 0; i < T; i++)
     {
-        scanf("%d %d %d", &a, &l, &s);
-
-        n = (long int)(2 * s)/(a + l);
-        d = (long int)(l - a)/(n - 5);
-        ft = (long int)(((2*s)/n)-(n-1)*d)/2;
-        num = (long int)n;
+        scanf("%lld %lld %lld", &a, &l, &s);
+        n = (long long int)(2 * s)/(a + l);
+        d = (long long int)(l - a)/(n - 5);
+        ft = (long long int)(((2*s)/n)-(n-1)*d)/2;
+        num = (long long int)n;
 
         if (i >= 1) {
-            printf("\n%d\n", num);
+            printf("\n%lld\n", num);
         }
         else {
-            printf("%d\n", num);
+            printf("%lld\n", num);
         }
         while(n >= 1)
         {
-            printf("%d ", ft);
+            printf("%lld ", ft);
             ft += d;
             n--;
         }
